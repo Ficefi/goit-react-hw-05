@@ -1,0 +1,53 @@
+.login_box{
+    display: flex;
+    margin-left: auto;
+}
+
+.search_btn{
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    margin-right: 64px;
+}
+
+.search_icon{
+    margin-right: 5px;
+    transform: translateY(3px);
+}
+
+.search_btn:hover{
+    padding: 10px 34px;
+    border-radius: 30px;
+    border: none;
+    background-color: crimson;
+    margin: -10px 10px -10px -10px;
+    cursor: pointer;
+}
+
+.signIn_btn{
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+.signIn_icon{
+    margin-right: 5px;
+    transform: translateY(3px);
+}
+
+.signIn_btn:hover{
+    padding: 10px 34px;
+    border-radius: 30px;
+    border: none;
+    margin: -10px -10px -10px -10px;
+    background-color: crimson;
+    cursor: pointer;
+}

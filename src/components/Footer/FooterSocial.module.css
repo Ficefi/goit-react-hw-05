@@ -1,0 +1,114 @@
+.social_container{
+    margin-right: 450px;
+}
+.footer_logo{
+    margin-bottom: 96px;
+}
+
+.footer_description{
+    width: 280px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #8D8D8D;
+    margin-bottom: 32px;
+}
+
+.online_markets_box{
+    margin-bottom: 32px;
+    padding: 0;
+}
+
+.applestore_logo{
+    margin-right: 20px;
+}
+
+.footer_social{
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 56px;
+}
+
+.social_link{
+    margin-right: 40px;
+}
+
+.facebook{
+    border: 2px solid #363636;
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.facebook:hover{
+    fill: #1877f2;
+    border-color: #1877f2;
+    background-color: white;
+}
+
+.instagram{
+    border: 2px solid #363636;
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.instagram:hover{
+    background: linear-gradient(180deg, rgb(26, 77, 245), rgb(122, 9, 187), rgb(184, 27, 150), rgb(252, 154, 8), rgb(255, 217, 0));
+    border-color: orange;
+}
+
+.twitter{
+    border: 2px solid #363636;
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.twitter:hover{
+    background-color: black;
+    border-color: white;
+}
+
+.youtube{
+    border: 2px solid #363636;
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.youtube:hover{
+    fill: red;
+    border-color: red;
+    background-color: white;
+}
+
+.privacy_box{
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 12px;
+}
+
+.privacy_text{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    color: #616161;
+    line-height: 1.4;
+    text-decoration: none;
+    margin-right: 12px;
+    transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.privacy_text:hover{
+    color: white;
+}
+
+.copyright{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    color: #616161;
+    line-height: 1.4;
+}
