@@ -1,0 +1,28 @@
+.search_form{
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.search_bar{
+	background-color: #121212;
+	outline: none;
+	border: none;
+	padding: 10px 16px;
+	border-radius: 8px 0 0 8px;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.search_btn{
+	background-color: #121212;
+	outline: none;
+	border: none;
+	border-radius: 0 8px 8px 0;
+	padding: 0 10px;
+}
+
+.search_btn:hover{
+	cursor: pointer;
+}

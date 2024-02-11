@@ -25,8 +25,16 @@
     border-radius: 30px;
     border: none;
     background-color: crimson;
-    margin: -10px 10px -10px -10px;
+    margin: -10px 30px -5px -10px;
     cursor: pointer;
+}
+
+.active{
+    padding: 10px 34px;
+    border-radius: 30px;
+    border: none;
+    background-color: crimson;
+    margin: -10px 30px -5px -10px;
 }
 
 .signIn_btn{
@@ -47,7 +55,7 @@
     padding: 10px 34px;
     border-radius: 30px;
     border: none;
-    margin: -10px -10px -10px -10px;
+    margin: -10px -35px -5px -5px;
     background-color: crimson;
     cursor: pointer;
 }

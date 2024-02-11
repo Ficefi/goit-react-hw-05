@@ -1,13 +1,19 @@
-import { Header } from "./Header/Header";
-import { Hero } from "./Hero/Hero";
-import { Footer } from "./Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "../pages/Home";
+import { Search } from "../pages/Search";
+import { NotFound } from "../pages/NotFound";
+import { Movie } from "../pages/Movie";
 
 export const App = () => {
   return (
-    <div>
-      <Header />
-      <Hero />
-      <Footer />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/search/:searchID" element={<Movie />} />
+        <Route path="movies" />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 };
