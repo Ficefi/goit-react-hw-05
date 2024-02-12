@@ -6,10 +6,9 @@ export const MovieGallery = ({ data }) => {
   return (
     <div className={css.container}>
       <ul className={css.gallery}>
-        {data.map((item) => (
-          <Link key={item.id} to={`${item.id}`}>
-            <MovieCard items={item} />
-            {console.log(item.id)}
+        {data.map((items) => (
+          <Link key={items.id} to={`${items.id}`}>
+            <MovieCard item={items} />
           </Link>
         ))}
       </ul>

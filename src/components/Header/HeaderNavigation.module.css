@@ -27,3 +27,9 @@
     border: none;
     background-color: crimson;
 }
+
+.active{
+    padding: 10px 34px;
+    border: none;
+    background-color: crimson;
+}

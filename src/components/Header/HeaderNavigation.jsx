@@ -1,4 +1,10 @@
+import { NavLink } from "react-router-dom";
+import clsx from "clsx";
 import css from "./HeaderNavigation.module.css";
+
+const buildLinkClass = ({ isActive }) => {
+  return clsx(css.categoryElement, isActive && css.active);
+};
 
 export const HeaderNavigation = () => {
   return (
@@ -8,14 +14,14 @@ export const HeaderNavigation = () => {
       </a>
       <ul className={css.categoriesList}>
         <li>
-          <a className={css.categoryElement} href="#">
+          <NavLink className={buildLinkClass} to="/movies">
             Movies
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a className={css.categoryElement} href="#">
+          <NavLink className={css.categoryElement} to="/series">
             Series
-          </a>
+          </NavLink>
         </li>
         <li>
           <a className={css.categoryElement} href="#">
