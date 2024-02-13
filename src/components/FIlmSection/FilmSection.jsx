@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { apiResponse, getSerials } from "../../js/api";
 import { NewMovies } from "./NewMovies/NewMovies";
 import { NewSerials } from "./NewSerials/NewSerials";
+import css from "./FilmSection.module.css";
 
 export const FilmSection = () => {
   const [movies, setMovies] = useState([]);
@@ -31,10 +32,10 @@ export const FilmSection = () => {
   }, []);
 
   return (
-    <div>
-      <h2>New Series</h2>
+    <div className={css.film_section}>
+      <h2 className={css.film_category}>New Series</h2>
       <NewSerials data={serials} />
-      <h2>New Movies</h2>
+      <h2 className={css.film_category}>New Movies</h2>
       <NewMovies data={movies} />
     </div>
   );

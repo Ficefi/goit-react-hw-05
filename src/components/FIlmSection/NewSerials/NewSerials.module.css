@@ -2,6 +2,7 @@
     display: flex;
     gap: 26px;
     justify-content: center;
+    list-style-type: none;
 }
 
 .serial_container{
