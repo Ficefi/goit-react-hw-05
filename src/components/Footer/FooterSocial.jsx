@@ -9,7 +9,7 @@ export const FooterSocial = () => {
     <div className={css.social_container}>
       <div className={css.footer_logo}>
         <a href="/">
-          <img src="/src/assets/white-onair-logo.svg" alt="white_logo" />
+          <img src="../src/assets/white-onair-logo.svg" alt="white_logo" />
         </a>
       </div>
       <p className={css.footer_description}>
@@ -18,10 +18,10 @@ export const FooterSocial = () => {
       </p>
       <div className={css.online_markets_box}>
         <a href="" className={css.applestore_logo}>
-          <img src="/src/assets/appstore.svg" alt="appstore" />
+          <img src="../src/assets/appstore.svg" alt="appstore" />
         </a>
         <a href="">
-          <img src="/src/assets/googleplay.svg" alt="googleplay" />
+          <img src="../src/assets/googleplay.svg" alt="googleplay" />
         </a>
       </div>
       <ul className={css.footer_social}>
