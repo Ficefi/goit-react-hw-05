@@ -1,0 +1,40 @@
+.actor_list{
+  display: flex;
+  margin-top: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.actor_container{
+  width: 300px;
+  text-align: center;
+}
+
+.actor_image{
+  width: 280px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.actor_name{
+  font-size: 24px;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.actor_character{
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.no_cast{
+  font-size: 32px;
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}

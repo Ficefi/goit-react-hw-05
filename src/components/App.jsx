@@ -3,10 +3,13 @@ import { Home } from "../pages/Home";
 import { Search } from "../pages/Search";
 import { NotFound } from "../pages/NotFound";
 import { MoviePage } from "../pages/MoviePage";
+import { SerialPage } from "../pages/SerialPage";
 import { Movies } from "../pages/Movies";
 import { Serials } from "../pages/Serials";
-import { Reviews } from "./Movie/Reviews/Reviews";
-import { Cast } from "./Movie/Cast/Cast";
+import { Movie_Cast } from "./Movie/Movie_Cast/Movie_Cast";
+import { Movie_Reviews } from "./Movie/Movie_Reviews/Movie_Reviews";
+import { Serial_Reviews } from "./Serial/Serial_Reviews/Serial_Reviews";
+import { Serial_Cast } from "./Serial/Serial_Cast/Serial_Cast";
 
 export const App = () => {
   return (
@@ -15,18 +18,18 @@ export const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
         <Route path="/search/:movieID" element={<MoviePage />}>
-          <Route path="reviews" element={<Reviews />} />
-          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Movie_Reviews />} />
+          <Route path="cast" element={<Movie_Cast />} />
         </Route>
         <Route path="/movies" element={<Movies />} />
         <Route path="/movies/:movieID" element={<MoviePage />}>
-          <Route path="reviews" element={<Reviews />} />
-          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Movie_Reviews />} />
+          <Route path="cast" element={<Movie_Cast />} />
         </Route>
-        <Route path="/series" element={<Serials />} />
-        <Route path="/series/:movieID" element={<MoviePage />}>
-          <Route path="reviews" element={<Reviews />} />
-          <Route path="cast" element={<Cast />} />
+        <Route path="/serials" element={<Serials />} />
+        <Route path="/serials/:serialID" element={<SerialPage />}>
+          <Route path="reviews" element={<Serial_Reviews />} />
+          <Route path="cast" element={<Serial_Cast />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

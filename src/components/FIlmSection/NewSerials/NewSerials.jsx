@@ -5,7 +5,7 @@ export const NewSerials = ({ data }) => {
   const serials_array = data.slice(0, 6);
   return (
     <ul className={css.new_serials_list}>
-      {serials_array.map(({ poster_path, original_title, overview, id }) => (
+      {serials_array.map(({ poster_path, name, overview, id }) => (
         <li key={id}>
           <Link to={`/serials/${id}`}>
             <div className={css.serial_container}>
@@ -16,7 +16,7 @@ export const NewSerials = ({ data }) => {
                   alt={overview}
                 />
                 <div className={css.info}>
-                  <h5 className={css.serial_name}>{original_title}</h5>
+                  <h5 className={css.serial_name}>{name}</h5>
                   <p className={css.info_item}>
                     {overview.length < 450
                       ? overview

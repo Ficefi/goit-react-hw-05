@@ -19,14 +19,9 @@ export const HeaderNavigation = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className={css.categoryElement} to="/series">
-            Series
+          <NavLink className={css.categoryElement} to="/serials">
+            Serials
           </NavLink>
-        </li>
-        <li>
-          <a className={css.categoryElement} href="#">
-            Channels
-          </a>
         </li>
       </ul>
     </div>

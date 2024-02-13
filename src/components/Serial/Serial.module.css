@@ -1,0 +1,97 @@
+.serial_main{
+  margin: 20px 0 50px 0;
+}
+
+.serial_container{
+  display: flex;
+  justify-content: center;
+}
+
+.poster_container{
+  margin-right: 50px;
+}
+
+.serial_poster{
+  width: 400px;
+  height: 600px;
+}
+
+.serial_title{
+  color: #fff;
+  font-size: 32px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+}
+
+.genres_list{
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.serial_headtext{
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+.serial_overview{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  width: 400px;
+}
+
+.serial_genres{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+.bottom_headtext{
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease-in;
+}
+
+.bottom_headtext:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.active{
+  text-decoration: underline;
+}
+
+.add_info_container{
+  display:  flex;
+  justify-content: center;
+  gap: 680px;
+  margin-top: 16px;
+}
+
+.very_good{
+  color: lime;
+}
+
+.good{
+  color: greenyellow;
+}
+
+.neutral{
+  color: goldenrod;
+}
+
+.bad{
+  color: red;
+}
+
+.ny_takoe{
+  color: maroon;
+}
