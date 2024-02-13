@@ -1,15 +1,19 @@
-import { NavLink, useParams, Outlet } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
+import { NavLink, useParams, Outlet, useLocation } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { getMovieDescriptionByID } from "../../js/api";
+import { Error } from "../Error/Error";
+import { FaArrowLeft } from "react-icons/fa6";
 import clsx from "clsx";
 import css from "./Movie.module.css";
 
 export const Movie = () => {
   const { movieID } = useParams();
   const [items, setItems] = useState([]);
+  const [error, setError] = useState(false);
+  const location = useLocation();
+  const returnLink = useRef(location.state);
 
   const buildLinkClass = ({ isActive }) => {
     return clsx(css.bottom_headtext, isActive && css.active);
@@ -37,8 +41,13 @@ export const Movie = () => {
 
   useEffect(() => {
     const getMovie = async (id) => {
-      const data = await getMovieDescriptionByID(id);
-      setItems([data]);
+      try {
+        const data = await getMovieDescriptionByID(id);
+        setItems([data]);
+        setError(false);
+      } catch (error) {
+        setError(true);
+      }
     };
 
     getMovie(movieID);
@@ -48,6 +57,14 @@ export const Movie = () => {
     <>
       <Header />
       <main className={css.movie_main}>
+        <div className={css.return}>
+          <NavLink to={returnLink.current ?? "/"}>
+            <FaArrowLeft color="white" size={32} className={css.return_arrow} />
+          </NavLink>
+        </div>
+
+        {error && <Error />}
+
         {items.map((item) => (
           <div key={item.id} className={css.movie_container}>
             <div className={css.poster_container}>

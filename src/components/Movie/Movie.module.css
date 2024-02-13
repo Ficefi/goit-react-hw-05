@@ -76,6 +76,34 @@
   margin-top: 16px;
 }
 
+.return{
+  background-color: crimson;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  margin-left: 40px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.return_arrow{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.return:hover{
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.return:hover .return_arrow{
+  transform: translateX(-5px);
+  fill: crimson;
+}
+
 .very_good{
   color: lime;
 }

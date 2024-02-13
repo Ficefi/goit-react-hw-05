@@ -1,21 +1,24 @@
 import { useState, useEffect } from "react";
 import { getSerials } from "../../../js/api";
 import { Link } from "react-router-dom";
+import { Error } from "../../Error/Error";
 import css from "./Serials_List.module.css";
 
 export const Serials_List = () => {
   const [serials, setSerials] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    const Api = async () => {
+    const getSerialsList = async () => {
       try {
         const data = await getSerials();
         setSerials(data);
+        setError(false);
       } catch (error) {
-        console.log(error);
+        setError(true);
       }
     };
-    Api();
+    getSerialsList();
   }, []);
 
   return (
@@ -48,7 +51,7 @@ export const Serials_List = () => {
           </li>
         ))}
       </ul>
-      );
+      {error && <Error />}
     </div>
   );
 };

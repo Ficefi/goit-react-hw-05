@@ -1,15 +1,19 @@
-import { NavLink, useParams, Outlet } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
+import { NavLink, useParams, Outlet, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { getSerialDescriptionByID } from "../../js/api";
+import { Error } from "../Error/Error";
+import { FaArrowLeft } from "react-icons/fa6";
 import clsx from "clsx";
 import css from "./Serial.module.css";
 
 export const Serial = () => {
   const { serialID } = useParams();
   const [items, setItems] = useState([]);
+  const [error, setError] = useState(false);
+  const location = useLocation();
+  const returnLink = useRef(location.state);
 
   const buildLinkClass = ({ isActive }) => {
     return clsx(css.bottom_headtext, isActive && css.active);
@@ -37,8 +41,13 @@ export const Serial = () => {
 
   useEffect(() => {
     const getSerial = async (id) => {
-      const data = await getSerialDescriptionByID(id);
-      setItems([data]);
+      try {
+        const data = await getSerialDescriptionByID(id);
+        setItems([data]);
+        setError(false);
+      } catch (error) {
+        setError(true);
+      }
     };
 
     getSerial(serialID);
@@ -48,6 +57,14 @@ export const Serial = () => {
     <>
       <Header />
       <main className={css.serial_main}>
+        <div className={css.return}>
+          <NavLink to={returnLink.current ?? "/"}>
+            <FaArrowLeft color="white" size={32} className={css.return_arrow} />
+          </NavLink>
+        </div>
+
+        {error && <Error />}
+
         {items.map((item) => (
           <div key={item.id} className={css.serial_container}>
             <div className={css.poster_container}>

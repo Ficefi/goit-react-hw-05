@@ -2,17 +2,20 @@ import { useState, useEffect } from "react";
 import { apiResponse } from "../../../js/api";
 import { Link } from "react-router-dom";
 import css from "./Movies_List.module.css";
+import { Error } from "../../Error/Error";
 
 export const Movies_List = () => {
   const [movies, setMovies] = useState([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const Api = async () => {
       try {
         const data = await apiResponse();
         setMovies(data);
+        setError(false);
       } catch (error) {
-        console.log(error);
+        setError(true);
       }
     };
     Api();
@@ -48,7 +51,7 @@ export const Movies_List = () => {
           </li>
         ))}
       </ul>
-      );
+      {error && <Error />}
     </div>
   );
 };
