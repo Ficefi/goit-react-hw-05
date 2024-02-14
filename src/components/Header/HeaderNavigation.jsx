@@ -9,9 +9,9 @@ const buildLinkClass = ({ isActive }) => {
 export const HeaderNavigation = () => {
   return (
     <div className={css.navigation}>
-      <a href="/" className={css.header_logo}>
-        <img src="/public/images/onair-logo.svg" alt="logo_onair" />
-      </a>
+      <NavLink to="/" className={css.header_logo}>
+        <img src="/onair-logo.svg" alt="logo_onair" />
+      </NavLink>
       <ul className={css.categoriesList}>
         <li>
           <NavLink className={buildLinkClass} to="/movies">
