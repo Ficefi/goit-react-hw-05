@@ -10,7 +10,7 @@ export const HeaderNavigation = () => {
   return (
     <div className={css.navigation}>
       <a href="/" className={css.header_logo}>
-        <img src="../src/assets/onair-logo.svg" alt="logo_onair" />
+        <img src="/public/images/onair-logo.svg" alt="logo_onair" />
       </a>
       <ul className={css.categoriesList}>
         <li>
