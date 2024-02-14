@@ -1,11 +1,5 @@
-import { Header } from "../components/Header/Header";
-import { NothingFound } from "../components/NothingFound/NothingFound";
+import Nothing from "../components/Nothing/Nothing";
 
-export const NotFound = () => {
-  return (
-    <>
-      <Header />
-      <NothingFound />
-    </>
-  );
-};
+export default function NotFound() {
+  return <Nothing />;
+}

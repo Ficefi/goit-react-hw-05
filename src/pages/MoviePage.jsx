@@ -1,9 +1,5 @@
 import { Movie } from "../components/Movie/Movie";
 
-export const MoviePage = () => {
-  return (
-    <>
-      <Movie />
-    </>
-  );
-};
+export default function MoviePage() {
+  return <Movie />;
+}

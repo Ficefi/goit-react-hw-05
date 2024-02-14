@@ -17,7 +17,7 @@
 }
 
 .no_review{
-  color: #fff;
+  color: #000;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   text-align: center;
@@ -35,7 +35,7 @@
 }
 
 .author_review{
-  color: #fff;
+  color: #000;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
   font-size: 16px;

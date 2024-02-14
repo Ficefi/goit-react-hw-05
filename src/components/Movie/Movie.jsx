@@ -1,17 +1,14 @@
 import { NavLink, useParams, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import { Header } from "../Header/Header";
-import { Footer } from "../Footer/Footer";
 import { getMovieDescriptionByID } from "../../js/api";
-import { Error } from "../Error/Error";
 import { FaArrowLeft } from "react-icons/fa6";
+import Header from "../Header/Header";
 import clsx from "clsx";
 import css from "./Movie.module.css";
 
 export const Movie = () => {
   const { movieID } = useParams();
   const [items, setItems] = useState([]);
-  const [error, setError] = useState(false);
   const location = useLocation();
   const returnLink = useRef(location.state);
 
@@ -44,9 +41,8 @@ export const Movie = () => {
       try {
         const data = await getMovieDescriptionByID(id);
         setItems([data]);
-        setError(false);
       } catch (error) {
-        setError(true);
+        console.error(error);
       }
     };
 
@@ -59,17 +55,19 @@ export const Movie = () => {
       <main className={css.movie_main}>
         <div className={css.return}>
           <NavLink to={returnLink.current ?? "/"}>
-            <FaArrowLeft color="white" size={32} className={css.return_arrow} />
+            <FaArrowLeft color="black" size={32} className={css.return_arrow} />
           </NavLink>
         </div>
-
-        {error && <Error />}
 
         {items.map((item) => (
           <div key={item.id} className={css.movie_container}>
             <div className={css.poster_container}>
               <img
-                src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
+                src={
+                  item.poster_path == null
+                    ? `https://via.placeholder.com/400x600?text=${item.title}`
+                    : `https://image.tmdb.org/t/p/original${item.poster_path}`
+                }
                 className={css.movie_poster}
                 loading="lazy"
                 alt={item.overview}
@@ -106,7 +104,6 @@ export const Movie = () => {
         </div>
         <Outlet />
       </main>
-      <Footer />
     </>
   );
 };

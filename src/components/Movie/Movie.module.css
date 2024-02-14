@@ -17,9 +17,9 @@
 }
 
 .movie_title{
-  color: #fff;
+  color: #000;
   font-size: 32px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: sans-serif;
   font-weight: 700;
 }
 
@@ -27,34 +27,36 @@
   list-style-type: none;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .movie_headtext{
-  color: #fff;
+  color: #000;
   font-size: 24px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
 }
 
 .movie_overview{
-  color: #fff;
+  color: #000;
   font-size: 20px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
   width: 400px;
 }
 
 .movie_genres{
-  color: #fff;
+  color: #000;
   font-size: 20px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: sans-serif;
   font-weight: 300;
 }
 
 .bottom_headtext{
-  color: #fff;
+  color: #000;
   font-size: 24px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
   text-decoration: none;
   transition: text-decoration 0.3s ease-in;
@@ -96,7 +98,7 @@
 
 .return:hover{
   cursor: pointer;
-  background-color: #fff;
+  background-color: #000;
 }
 
 .return:hover .return_arrow{
