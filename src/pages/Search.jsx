@@ -1,51 +1,53 @@
 import { useState } from "react";
 import { getSearchMovies } from "../js/api";
 import { useSearchParams, useLocation, Link } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "../components/Header/Header";
 
 export default function Search() {
-  const [movie, setMovie] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
-  const location = useLocation();
+	const [movie, setMovie] = useState([]);
+	const [searchParams, setSearchParams] = useSearchParams();
+	const location = useLocation();
 
-  const findMovie = async () => {
-    try {
-      const data = await getSearchMovies(searchParams.get("query"));
-      setMovie(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+	const handleSubmit = (event) => {
+		event.preventDefault();
 
-  const handleChange = (event) => {
-    setSearchParams({ query: event.target.value });
-  };
+		searchParams.set("query", event.target.search.value ?? "");
+		setSearchParams(searchParams);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+		event.target.reset();
+	};
 
-    findMovie();
-    event.target.reset();
-  };
+	useEffect(() => {
+		const findMovie = async () => {
+			try {
+				const data = await getSearchMovies(searchParams.get("query"));
+				setMovie(data);
+			} catch (error) {
+				console.error(error);
+			}
+		};
 
-  return (
-    <>
-      <Header />
+		findMovie();
+	}, [searchParams]);
 
-      <form onSubmit={handleSubmit}>
-        <input name="search" onChange={handleChange} placeholder="Search" />
-        <button type="submit">Submit</button>
-      </form>
+	return (
+		<>
+			<Header />
 
-      <ul>
-        {movie.map(({ title, id }) => (
-          <li key={id}>
-            <Link to={`/movies/${id}`} state={location}>
-              {title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </>
-  );
+			<form onSubmit={handleSubmit}>
+				<input name="search" placeholder="Search" />
+				<button type="submit">Submit</button>
+			</form>
+			<ul>
+				{movie.map(({ title, id }) => (
+					<li key={id}>
+						<Link to={`/movies/${id}`} state={location}>
+							{title}
+						</Link>
+					</li>
+				))}
+			</ul>
+		</>
+	);
 }
