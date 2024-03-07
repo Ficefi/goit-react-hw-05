@@ -1,127 +1,124 @@
-.movie_main{
-  margin: 20px 0 50px 0;
+.movie_main {
+	margin: 20px 0 50px 0;
 }
 
-.movie_container{
-  display: flex;
-  justify-content: center;
+.movie_container {
+	display: flex;
+	justify-content: center;
 }
 
-.poster_container{
-  margin-right: 50px;
+.poster_container {
+	margin-right: 50px;
 }
 
-.movie_poster{
-  width: 400px;
-  height: 600px;
+.movie_poster {
+	width: 400px;
+	height: 600px;
 }
 
-.movie_title{
-  color: #000;
-  font-size: 32px;
-  font-family: sans-serif;
-  font-weight: 700;
+.movie_title {
+	color: #000;
+	font-size: 32px;
+	font-family: sans-serif;
+	font-weight: 700;
 }
 
-.genres_list{
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+.genres_list {
+	list-style-type: none;
+	display: flex;
+	gap: 20px;
+	margin: 0;
+	padding: 0;
 }
 
-.movie_headtext{
-  color: #000;
-  font-size: 24px;
-  font-family: sans-serif;
-  font-weight: 500;
+.movie_headtext {
+	color: #000;
+	font-size: 24px;
+	font-family: sans-serif;
+	font-weight: 500;
 }
 
-.movie_overview{
-  color: #000;
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: 300;
-  width: 400px;
+.movie_overview {
+	color: #000;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: 300;
+	width: 400px;
 }
 
-.movie_genres{
-  color: #000;
-  font-size: 20px;
-  font-family: sans-serif;
-  font-weight: 300;
+.movie_genres {
+	color: #000;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: 300;
 }
 
-.bottom_headtext{
-  color: #000;
-  font-size: 24px;
-  font-family: sans-serif;
-  font-weight: 500;
-  text-decoration: none;
-  transition: text-decoration 0.3s ease-in;
+.bottom_headtext {
+	color: #000;
+	font-size: 24px;
+	font-family: sans-serif;
+	font-weight: 500;
+	text-decoration: none;
+	transition: text-decoration 0.3s ease-in;
 }
 
-.bottom_headtext:hover{
-  cursor: pointer;
-  text-decoration: underline;
+.bottom_headtext:hover {
+	cursor: pointer;
+	text-decoration: underline;
 }
 
-.active{
-  text-decoration: underline;
+.active {
+	text-decoration: underline;
 }
 
-.add_info_container{
-  display:  flex;
-  justify-content: center;
-  gap: 680px;
-  margin-top: 16px;
+.add_info_container {
+	display: flex;
+	justify-content: center;
+	gap: 680px;
+	margin-top: 16px;
 }
 
-.return{
-  background-color: crimson;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  padding: 8px;
-  margin-left: 40px;
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+.return {
+	height: 40px;
+	width: 40px;
+	padding: 8px;
+	margin-left: 40px;
+	position: relative;
+	transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.return_arrow{
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+.return_arrow {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.return:hover{
-  cursor: pointer;
-  background-color: #000;
+.return:hover {
+	cursor: pointer;
 }
 
-.return:hover .return_arrow{
-  transform: translateX(-5px);
-  fill: crimson;
+.return:hover .return_arrow {
+	transform: translateX(-5px);
+	fill: #fabbaa;
 }
 
-.very_good{
-  color: lime;
+.very_good {
+	color: lime;
 }
 
-.good{
-  color: greenyellow;
+.good {
+	color: greenyellow;
 }
 
-.neutral{
-  color: goldenrod;
+.neutral {
+	color: goldenrod;
 }
 
-.bad{
-  color: red;
+.bad {
+	color: red;
 }
 
-.ny_takoe{
-  color: maroon;
+.ny_takoe {
+	color: maroon;
 }
