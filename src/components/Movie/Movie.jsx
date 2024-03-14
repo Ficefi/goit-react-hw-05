@@ -2,7 +2,7 @@ import { NavLink, useParams, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { getMovieDescriptionByID } from "../../js/api";
 import { FaArrowLeft } from "react-icons/fa6";
-import Header from "../Header/Header";
+import Navigation from "../Navigation/Navigation";
 import clsx from "clsx";
 import css from "./Movie.module.css";
 
@@ -51,7 +51,7 @@ export const Movie = () => {
 
 	return (
 		<>
-			<Header />
+			<Navigation />
 			<main className={css.movie_main}>
 				<NavLink to={returnLink.current ?? "/"} className={css.return}>
 					<FaArrowLeft color="black" size={32} className={css.return_arrow} />
