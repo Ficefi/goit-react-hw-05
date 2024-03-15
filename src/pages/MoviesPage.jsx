@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { getSearchMovies } from "../js/api";
-import { useSearchParams, useLocation, Link } from "react-router-dom";
+import { useSearchParams, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { MovieList } from "../components/Movie/MovieList/MovieList";
 import Navigation from "../components/Navigation/Navigation";
 
 export default function MoviesPage() {
@@ -34,20 +35,11 @@ export default function MoviesPage() {
 	return (
 		<>
 			<Navigation />
-
 			<form onSubmit={handleSubmit}>
 				<input name="search" placeholder="Search" />
 				<button type="submit">Submit</button>
 			</form>
-			<ul>
-				{movie.map(({ title, id }) => (
-					<li key={id}>
-						<Link to={`/movies/${id}`} state={location}>
-							{title}
-						</Link>
-					</li>
-				))}
-			</ul>
+			<MovieList array={movie} locate={location} />
 		</>
 	);
 }
