@@ -1,7 +1,7 @@
 import Navigation from "../components/Navigation/Navigation";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { getMoviesResponse } from "../../../js/api";
+import { getMoviesResponse } from "../js/api";
 import { MovieList } from "../components/Movie/MovieList/MovieList";
 
 export default function HomePage() {
