@@ -3,7 +3,6 @@ import { getSearchMovies } from "../js/api";
 import { useSearchParams, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { MovieList } from "../components/Movie/MovieList/MovieList";
-import Navigation from "../components/Navigation/Navigation";
 
 export default function MoviesPage() {
 	const [movie, setMovie] = useState([]);
@@ -34,7 +33,6 @@ export default function MoviesPage() {
 
 	return (
 		<>
-			<Navigation />
 			<form onSubmit={handleSubmit}>
 				<input name="search" placeholder="Search" />
 				<button type="submit">Submit</button>
